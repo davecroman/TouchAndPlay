@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{C0B391B5-5BD8-43E7-86FA-CA00948AC58F}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TouchAndPlay</RootNamespace>
+    <AssemblyName>TouchAndPlay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>2412629b-2a5e-4f70-a000-cf46b8deb986</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=1.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="components\gamespecific\GoalPanel.cs" />
+    <Compile Include="components\gamespecific\LevelSelector.cs" />
+    <Compile Include="db\playerdata\GameBest.cs" />
+    <Compile Include="db\playerdata\GameData.cs" />
+    <Compile Include="db\playerdata\LevelBest.cs" />
+    <Compile Include="effects\BasicScoreText.cs" />
+    <Compile Include="engine\bubbles\BubbleSetState.cs" />
+    <Compile Include="engine\bubbles\RedBubble.cs" />
+    <Compile Include="engine\bubbles\StarBubble.cs" />
+    <Compile Include="engine\GameType.cs" />
+    <Compile Include="engine\bubbles\Bubble.cs" />
+    <Compile Include="engine\bubbles\BubbleSetType.cs" />
+    <Compile Include="engine\bubbles\BubbleState.cs" />
+    <Compile Include="engine\bubbles\BubbleType.cs" />
+    <Compile Include="engine\bubbles\DragBubble.cs" />
+    <Compile Include="engine\bubbles\DragBubbleState.cs" />
+    <Compile Include="engine\bubbles\DragBubbleType.cs" />
+    <Compile Include="components\BasicRectangle.cs" />
+    <Compile Include="components\BasicSlider.cs" />
+    <Compile Include="components\BasicTextField.cs" />
+    <Compile Include="components\RadioButtonList.cs" />
+    <Compile Include="console\MyConsole.cs" />
+    <Compile Include="db\playerdata\PlayerProfile.cs" />
+    <Compile Include="db\TAPDatabase.cs" />
+    <Compile Include="effects\BasicEffect.cs" />
+    <Compile Include="effects\BasicParticle.cs" />
+    <Compile Include="effects\EffectHandler.cs" />
+    <Compile Include="engine\LevelData.cs" />
+    <Compile Include="engine\LevelMaker.cs" />
+    <Compile Include="Gallery.cs" />
+    <Compile Include="GameConfig.cs" />
+    <Compile Include="GameConfigInstance.cs" />
+    <Compile Include="input\MyKeyboard.cs" />
+    <Compile Include="input\MyMouse.cs" />
+    <Compile Include="screens\CreateProfileScreen.cs" />
+    <Compile Include="screens\LineGraph.cs" />
+    <Compile Include="screens\OptionScreen.cs" />
+    <Compile Include="screens\SelectGameScreen.cs" />
+    <Compile Include="screens\TestScreen.cs" />
+    <Compile Include="screens\BasicScreenState.cs" />
+    <Compile Include="screens\GameMode.cs" />
+    <Compile Include="screens\BasicScreen.cs" />
+    <Compile Include="screens\MenuScreen.cs" />
+    <Compile Include="screens\ScreenState.cs" />
+    <Compile Include="screens\SplashScreen.cs" />
+    <Compile Include="screens\SplashScreenState.cs" />
+    <Compile Include="screens\StagePreparationStates.cs" />
+    <Compile Include="TAPGame.cs" />
+    <Compile Include="components\BasicButton.cs" />
+    <Compile Include="components\BasicComponent.cs" />
+    <Compile Include="components\BasicFonts.cs" />
+    <Compile Include="components\BasicImage.cs" />
+    <Compile Include="components\ButtonState.cs" />
+    <Compile Include="components\ImageButton.cs" />
+    <Compile Include="components\gamespecific\MyUI.cs" />
+    <Compile Include="KinectManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="engine\bubbles\BubbleSet.cs" />
+    <Compile Include="screens\StageScreen.cs" />
+    <Compile Include="components\StageBox.cs" />
+    <Compile Include="components\StringAlignment.cs" />
+    <Compile Include="components\BasicText.cs" />
+    <Compile Include="components\CartesianPlane.cs" />
+    <Compile Include="utils\MathUtil.cs" />
+    <Compile Include="utils\Painter.cs" />
+    <Compile Include="utils\Randomizer.cs" />
+    <Compile Include="utils\ScoreChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utils\ScoreChart.Designer.cs">
+      <DependentUpon>ScoreChart.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TouchAndPlayContent\TouchAndPlayContent.contentproj">
+      <Name>TouchAndPlayContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{350B6E3F-5D24-41F4-B468-C4D37EFE715D}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="utils\ScoreChart.resx">
+      <DependentUpon>ScoreChart.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
