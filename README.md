@@ -1,7 +1,7 @@
 # TAP - Touch And Play
 
 ## What is this?
-This game was developed and designed specifically for burns rehabilitation patients using Kinect 1.5 circa 2012. the accompanying literature for this project is [here](http://ieeexplore.ieee.org/document/6623680/).
+This game was developed and designed specifically for burns rehabilitation patients using Kinect 1.5 circa 2012 for a school project. The accompanying literature for this project is [in this link](http://ieeexplore.ieee.org/document/6623680/).
 
 ## Prerequisites
 
@@ -24,12 +24,16 @@ http://www.microsoft.com/en-us/kinectforwindows.
 ### Method 2: By installing the application using an installer
 
 1. Download the contents of this folder: https://www.dropbox.com/sh/6m84m41yuzvolvi/AAAoYh01k2AGnuQPsQjuKZZia?dl=0
-2. Follow the instructions
+2. Follow the instructions in *Installation Instructions.txt*
 
-**Note**: The *Dependencies* folder contains the Kinect driver installers and the Microsoft .NET framework.
+**Note**: The *Dependencies* folder contains the Kinect driver and the Microsoft .NET 4.0 installers
 
 ## Contributing and reporting issues
 
 For any issues, concerns, or ideas, please send an email to davecromandev@gmail.com
 
 Thank you
+
+## Acknowledgements
+
+This application was developed with the help of Kai Salamanca, Diana Pacapac, and Dr. Jaime Caro. Design was driven by feedback from the team in the Department of Rehabilitation Medicine of Philippine General Hospital.
