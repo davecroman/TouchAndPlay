@@ -93,17 +93,14 @@ namespace TouchAndPlay.screens
                             transitionState = TransitionState.TRANSITION_OUT;
                             break;
                         case "STATISTICS":
-                            if (!scoreChart.Visible)
-                            {
-                                scoreChart.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-                                scoreChart.TopMost = true;
+                            scoreChart.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+                            scoreChart.TopMost = true;
 
-                                scoreChart.UpdateFromDB();
-                                scoreChart.updateBubblesPoppedTab();
-                                scoreChart.updateMotionRangeTab();
-                                scoreChart.updateScoreTab();
-                                scoreChart.ShowDialog();
-                            }
+                            scoreChart.UpdateFromDB();
+                            scoreChart.updateBubblesPoppedTab();
+                            scoreChart.updateMotionRangeTab();
+                            scoreChart.updateScoreTab();
+                            scoreChart.ShowDialog();
                             break;
                         case "OPTIONS":
                             targetScreen = ScreenState.OPTION_SCREEN;
@@ -117,8 +114,17 @@ namespace TouchAndPlay.screens
                             game.Exit();
                             break;
                         case "Contract":
+                            graphics.PreferredBackBufferWidth = GameConfig.APP_WIDTH;
+                            graphics.PreferredBackBufferHeight = GameConfig.APP_HEIGHT;
+                            graphics.IsFullScreen = false;
+                            graphics.ApplyChanges();
+                            break;
                         case "Expand":
-                            graphics.ToggleFullScreen();
+                            graphics.IsFullScreen = true;
+                            graphics.ApplyChanges();
+                            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+                            graphics.SynchronizeWithVerticalRetrace = true;
                             break;
                     }
                 }

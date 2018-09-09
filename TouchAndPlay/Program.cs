@@ -1,4 +1,5 @@
 using System;
+using System.Windows.Forms;
 
 namespace TouchAndPlay
 {
@@ -12,6 +13,8 @@ namespace TouchAndPlay
         {
             using (Main game = new Main())
             {
+                Form frm = (Form)Form.FromHandle(game.Window.Handle);
+                frm.FormBorderStyle = FormBorderStyle.None; 
                 game.Run();
             }
         }

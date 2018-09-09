@@ -18,13 +18,18 @@ namespace TouchAndPlay.utils
         public ScoreChart()
         {
             InitializeComponent();
-
-            
             gamesToShow = new List<GameData>();
+            updateUi();
+        }
 
+        private void updateUi()
+        {
             profilesComboBox.DataSource = TAPDatabase.playerProfiles;
             profilesComboBox2.DataSource = TAPDatabase.playerProfiles;
             profileComboBox3.DataSource = TAPDatabase.playerProfiles;
+            profilesComboBox.Update();
+            profilesComboBox2.Update();
+            profileComboBox3.Update();
 
             profilesComboBox.SelectedItem = GameConfig.CURRENT_PROFILE;
             profilesComboBox2.SelectedItem = GameConfig.CURRENT_PROFILE;
@@ -48,12 +53,9 @@ namespace TouchAndPlay.utils
             showAllCheckBox2.Checked = true;
             showAllQCheckBox.Checked = true;
 
-
             updateScoreTab();
             updateBubblesPoppedTab();
             updateMotionRangeTab();
-            
-
         }
 
         public int getGameIndex(string gameType)
@@ -73,6 +75,7 @@ namespace TouchAndPlay.utils
 
         public void UpdateFromDB()
         {
+            updateUi();
             switch (tabControl.SelectedTab.Text)
             {
                 case "Scores":
@@ -85,13 +88,14 @@ namespace TouchAndPlay.utils
                     updateMotionRangeTab();
                     break;
             }
-            
-
-            profilesComboBox.DataSource = TAPDatabase.playerProfiles;
         }
 
         public void updateMotionRangeTab()
         {
+            if (profileComboBox3.SelectedItem == null)
+            {
+                return;
+            }
             PlayerProfile profile = TAPDatabase.getProfile(profileComboBox3.SelectedItem.ToString());
 
             if (profile.Q1_HIT + profile.Q1_MISS > 5)

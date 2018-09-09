@@ -649,6 +649,10 @@ namespace TouchAndPlay.screens
         private void incrementPieChart(bool hit, Quadrants q)
         {
             PlayerProfile profile = TAPDatabase.getProfile(GameConfig.CURRENT_PROFILE);
+            if (profile == null)
+            {
+                return;
+            }
 
             switch (q)
             {

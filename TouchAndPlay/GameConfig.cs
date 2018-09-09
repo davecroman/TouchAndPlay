@@ -40,7 +40,7 @@ namespace TouchAndPlay
 
         /*==================PROFILE VARIABLES======================*/
 
-        public static string CURRENT_PROFILE = "Juan dela Cruz";
+        public static string CURRENT_PROFILE = "Guest";
 
 
         /*=================EFFECT CONSTANTS=====================*/

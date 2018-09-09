@@ -25,8 +25,20 @@ namespace TouchAndPlay.db
         public static void setup()
         {
             dirPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TouchAndPlay") + "\\";
+            initialiseProfiles();
             loadProfiles();
             loadGameConfig();
+        }
+
+        private static void initialiseProfiles()
+        {
+            if (!Directory.Exists(dirPath + profilesDir))
+            {
+                Directory.CreateDirectory(dirPath + profilesDir);
+                PlayerProfile guestProfile = new PlayerProfile("Guest");
+                saveProfile(guestProfile);
+                GameConfig.CURRENT_PROFILE = guestProfile.getName();
+            }
         }
 
         private static void loadGameConfig()
@@ -58,8 +70,6 @@ namespace TouchAndPlay.db
 
         public static void saveProfile(PlayerProfile profile)
         {
-            playerProfiles.Add(profile);
-
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(PlayerProfile));
@@ -69,13 +79,12 @@ namespace TouchAndPlay.db
                     serializer.Serialize(textWriter, profile);
                     textWriter.Close();
                 }
+                playerProfiles.Add(profile);
             }
             catch (Exception e)
             {
                 MyConsole.print(e.InnerException.ToString());
             }
-
-           
         }
 
         public static void saveGameConfig()
@@ -107,7 +116,7 @@ namespace TouchAndPlay.db
             }
             else
             {
-                GameConfig.CURRENT_PROFILE = "Juan";
+                GameConfig.CURRENT_PROFILE = "Guest";
             }
         }
 
